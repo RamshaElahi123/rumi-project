@@ -1,133 +1,136 @@
 import React from "react";
 import Image from "next/image";
 import {
-  FaFacebookF,
-  FaTwitter,
   FaInstagram,
-  FaPinterestP,
-  FaYoutube,
+  FaFacebookF,
+  FaWhatsapp,
 } from "react-icons/fa";
-import { FaPaypal, FaCcVisa, FaCcMastercard, FaCcAmex } from "react-icons/fa";
+import { SiTiktok } from "react-icons/si";
+import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200 px-4  sm:px-12 md:px-28">
+    <footer className="bg-white border-t border-gray-200 px-4 sm:px-12 md:px-28">
       <div className="mx-auto py-12">
         <div className="flex flex-wrap justify-between gap-8">
           {/* Brand Section */}
-          <div className="flex flex-col w-full  md:w-[320px] items-start">
+          <div className="flex flex-col w-full md:w-[320px] items-start">
             <div className="flex items-center gap-2">
               <Image
-                src="/images/Vector.png"
-                alt="Comforty Logo"
+                src="/images/logon.web rumi.jpeg" // 🔥 Replace with your logo
+                alt="Rumi Logo"
                 width={40}
-                height={23.34}
+                height={40}
                 className="ml-3"
               />
               <span className="text-[#272343] text-[26px] font-bold">
-                Comforty
+                Attractions By Rumi
               </span>
             </div>
             <p className="mt-4 text-gray-500">
-              Vivamus tristique odio sit amet velit semper, eu posuere turpis
-              interdum. Cras egestas purus.
+              Discover timeless scents, elegant watches, and luxurious bags, stoles & scarves designed to make every moment special.
             </p>
-            <div className="flex justify-center gap-4 mt-4">
+
+            {/* Social Media Icons */}
+            <div className="flex justify-start gap-4 mt-4">
               <a
-                href="https://facebook.com"
+                href="https://wa.me/923XXXXXXXXX" // 🔥 Replace with your WhatsApp number
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-[#007580] text-xl p-2 border-2 border-transparent rounded-full hover:border-[#007580]"
+                className="text-green-500 hover:text-green-700 text-2xl"
+              >
+                <FaWhatsapp />
+              </a>
+              <a
+                href="https://www.facebook.com/yourpage" // 🔥 Replace with your Facebook link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 text-2xl"
               >
                 <FaFacebookF />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.instagram.com/be_attractive_with_rumi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-[#007580] text-xl p-2 border-2 border-transparent rounded-full hover:border-[#007580]"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-[#007580] text-xl p-2 border-2 border-transparent rounded-full hover:border-[#007580]"
+                className="text-pink-500 hover:text-pink-700 text-2xl"
               >
                 <FaInstagram />
               </a>
               <a
-                href="https://pinterest.com"
+                href="https://www.tiktok.com/@be.attractive.wit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-[#007580] text-xl p-2 border-2 border-transparent rounded-full hover:border-[#007580]"
+                className="text-black hover:text-gray-700 text-2xl"
               >
-                <FaPinterestP />
+                <SiTiktok />
               </a>
               <a
-                href="https://youtube.com"
+                href="mailto:beattractivewithrumi@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-[#007580] text-xl p-2 border-2 border-transparent rounded-full hover:border-[#007580]"
+                className="text-red-500 hover:text-red-700 text-2xl"
               >
-                <FaYoutube />
+                <MdEmail />
               </a>
             </div>
           </div>
 
-          {/* Category Section */}
+          {/* Categories Section */}
           <div className="w-full md:w-1/4 lg:w-[105px]">
-            <h4 className="text-lg font-semibold text-[#9A9CAA]">Category</h4>
+            <h4 className="text-lg font-semibold text-[#9A9CAA]">Categories</h4>
             <ul className="mt-4 text-[#272343] space-y-2">
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#007580] hover:underline hover:underline-offset-4"
+                  className="hover:text-[#029FAE] hover:underline hover:underline-offset-4"
                 >
-                  Sofa
+                  Scents
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#007580] hover:underline hover:underline-offset-4"
+                  className="hover:text-[#029FAE] hover:underline hover:underline-offset-4"
                 >
-                  Armchair
+                  Watches
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#007580] hover:underline hover:underline-offset-4"
+                  className="hover:text-[#029FAE] hover:underline hover:underline-offset-4"
                 >
-                  Wing Chair
+                  Bags
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#007580] hover:underline hover:underline-offset-4"
+                  className="hover:text-[#029FAE] hover:underline hover:underline-offset-4"
                 >
-                  Desk Chair
+                  Stoles
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#007580] hover:underline hover:underline-offset-4"
+                  className="hover:text-[#029FAE] hover:underline hover:underline-offset-4"
                 >
-                  Wooden Chair
+                  Scarves
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-[#007580] hover:underline hover:underline-offset-4"
-                >
-                  Park Bench
-                </a>
-              </li>
+            </ul>
+          </div>
+
+          {/* Facilities Section */}
+          <div className="w-full md:w-1/4 lg:w-[156px]">
+            <h4 className="text-lg font-semibold text-[#9A9CAA]">Facilities</h4>
+            <ul className="mt-4 text-[#272343] space-y-2">
+              <li>Premium Quality</li>
+              <li>Unbeatable Prices</li>
+              <li>Guarantee Safe</li>
+              <li>Exclusive Design</li>
             </ul>
           </div>
 
@@ -138,72 +141,37 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#007580] hover:underline hover:underline-offset-4"
+                  className="hover:text-[#029FAE] hover:underline hover:underline-offset-4"
                 >
-                  Help & Support
+                  Contact Us
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#007580] hover:underline hover:underline-offset-4"
+                  className="hover:text-[#029FAE] hover:underline hover:underline-offset-4"
                 >
-                  Terms & Conditions
+                  Shipping
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#007580] hover:underline hover:underline-offset-4"
+                  className="hover:text-[#029FAE] hover:underline hover:underline-offset-4"
                 >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-[#007580] hover:underline hover:underline-offset-4"
-                >
-                  Help
+                  FAQs
                 </a>
               </li>
             </ul>
           </div>
-
-          {/* Newsletter Section */}
-          <div className="w-full md:w-1/4 lg:w-[424px]">
-            <h4 className="text-lg font-semibold text-[#9A9CAA]">Newsletter</h4>
-            <div className="mt-4 flex gap-2">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="px-4 py-2 w-full border text-[#9A9CAA] border-gray-300 rounded-l-md focus:outline-none"
-              />
-              <button className="bg-[#029FAE] text-white px-6 py-2 rounded-md hover:bg-teal-700">
-                Subscribe
-              </button>
-            </div>
-            <p className="mt-4 text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              tincidunt erat enim.
-            </p>
-          </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="flex justify-between items-center flex-wrap text-[#9A9CAA] border-t pt-8">
-          <p>
-            ©2025 -   Comfirty  - Designed & Developed by{" "}
-            <a href="#" className="text-[#272343] hover:underline">
-              Ramsha Elahi
-            </a>
+        <div className="flex justify-between items-center flex-wrap text-white bg-[#272343] pt-4 pb-4 mt-8 rounded-sm">
+          <p className="w-full text-center text-sm">
+            ©2025 Attractions By Rumi. Designed & Developed by{" "}
+            <span className="font-semibold">Ramsha Elahi</span>
           </p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <FaCcMastercard size={40} />
-            <FaPaypal size={40} />
-            <FaCcAmex size={40} />
-            <FaCcVisa size={40} />
-          </div>
         </div>
       </div>
     </footer>

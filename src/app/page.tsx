@@ -32,11 +32,11 @@ export default function Home() {
 {/* <Instagram/> */}
 {/* <SingleProductPages/> */}
 <AllProducts/>
-<Cart/>
+
 <Contact/>
 <ContactSection/>
 <Faqs/>
-<AboutSection/>
+
 {/* <AboutPopularProduct/> */}
 
 

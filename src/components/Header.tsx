@@ -14,13 +14,21 @@ const Header = () => {
       <div className="max-w-screen-xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
         <div className="flex items-center space-x-3">
           <Image
-            src="/images/Vector.png"
+            src="/images/abr.png"
             alt="Comforty Logo"
             width={40}
             height={23.34}
             className="ml-3"
           />
-          <h2 className="text-[26px] font-medium">Comforty</h2>
+<h2
+  className="text-[40px] font-semibold italic text-[#b13368] tracking-wide"
+  style={{
+    fontFamily: '"Playfair Display", serif',
+  }}
+>
+  AbR
+</h2>
+
         </div>
         <div className="flex space-x-3">
           <Link href="/wishlist">
