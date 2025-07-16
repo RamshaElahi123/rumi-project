@@ -21,13 +21,15 @@ const Header = () => {
             className="ml-3"
           />
 <h2
-  className="text-[40px] font-semibold italic text-[#b13368] tracking-wide"
+  className="text-[48px] font-semibold text-[#b13368] tracking-wide"
   style={{
-    fontFamily: '"Playfair Display", serif',
+    fontFamily: '"Dancing Script", cursive',
   }}
 >
   AbR
 </h2>
+
+
 
         </div>
         <div className="flex space-x-3">

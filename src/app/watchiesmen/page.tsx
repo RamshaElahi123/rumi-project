@@ -15,23 +15,9 @@ export const formatPKR = (price: number) => `PKR ${price.toLocaleString()}`;
 const luxuryWatches = [
   {
     id: 1,
-    name: 'Rich Gold',
-    price: 2999,
-    image: '/images/5 bracelet.jpeg',
-    tag: 'Free Bracelet',
-  },
-  {
-    id: 2,
-    name: 'Royal Black Dial',
-    price: 1599,
-    image: '/images/w4.jpeg',
-    tag: 'Exclusive',
-  },
-  {
-    id: 3,
-    name: 'Man in Black Aura',
-    price: 2499,
-    image: '/images/6 aura.jpeg',
+    name: 'Active Pro Watch',
+    price: 279,
+    image: '/images/smartt.jpeg',
     tag: 'Limited',
   },
 ];

@@ -22,7 +22,7 @@ const luxuryProducts = [
     price: 999,
     images: ['/images/luxury1.jpeg', '/images/luxury2.jpeg'],
     description:
-      'A dazzling timepiece adorned with fine diamonds and crafted with precision. Pure elegance on your wrist.',
+      'Couple watch , A dazzling timepiece adorned with fine diamonds and crafted with precision. Pure elegance on your wrist.',
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const luxuryProducts = [
     price: 1299,
     images: ['/images/luxury2.jpeg', '/images/luxury1.jpeg'],
     description:
-      'Radiating luxury, this watch features a deep sapphire dial and a sleek, refined profile.',
+      'Couple Watch ,Radiating luxury, this watch features a deep sapphire dial and a sleek, refined profile.',
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const luxuryProducts = [
     price: 1499,
     images: ['/images/luxury3.jpeg', '/images/luxury5.jpeg'],
     description:
-      'With its bold golden body, this prestige piece is designed for those who love attention.',
+      'Couple Watch ,With its bold golden body, this prestige piece is designed for those who love attention.',
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const luxuryProducts = [
     price: 1999,
     images: ['/images/luxury4.jpeg', '/images/luxury6.jpeg'],
     description:
-      'A limited-edition platinum watch with a minimalist yet high-class presence.',
+      'Couple Watch , A limited-edition platinum watch with a minimalist yet high-class presence.',
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const luxuryProducts = [
     price: 1399,
     images: ['/images/luxury5.jpeg', '/images/luxury3.jpeg'],
     description:
-      'Featuring emerald stones and a slim band — grace meets green brilliance.',
+      'Couple Watch, Featuring emerald stones and a slim band — grace meets green brilliance.',
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ const luxuryProducts = [
     price: 1899,
     images: ['/images/luxury6.jpeg', '/images/luxury2.jpeg'],
     description:
-      'Combining pearls with modern design, this bestseller brings timeless royalty to life.',
+      'Couple Watch ,Combining pearls with modern design, this bestseller brings timeless royalty to life.',
   },
 ];
 
