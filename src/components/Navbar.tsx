@@ -34,7 +34,7 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex gap-8 ml-3 items-center">
           <Link href="/" className="text-[#007580] text-[14px] font-medium">Home</Link>
-          <Link href="/allProducts" className="text-[14px] font-medium">Products</Link>
+          <Link href="/allProducts" className="text-[14px] font-medium"> All Products</Link>
 
           {/* Desktop Dropdowns */}
           {["scents", "watch", "bags"].map((cat) => (
@@ -44,7 +44,7 @@ const Navbar = () => {
                 className="flex items-center text-[14px] font-medium"
               >
                 {cat === "scents" && "Scents"}
-                {cat === "watch" && "Watchies"}
+                {cat === "watch" && "Watches"}
                 {cat === "bags" && "Bags"}
                 <FaChevronDown className="ml-1 text-sm" />
               </button>
