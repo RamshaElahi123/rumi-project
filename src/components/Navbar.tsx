@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-white py-2 shadow-md">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 lg:px-0">
-        {/* Left - Logo */}
+        {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="h-14 w-auto flex items-center">
             <Image
@@ -31,32 +31,36 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Links */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 ml-3 items-center">
           <Link href="/" className="text-[#007580] text-[14px] font-medium">Home</Link>
-          <Link href="/allProducts" className="text-[14px] font-medium"> All Products</Link>
+          <Link href="/allProducts" className="text-[14px] font-medium">All Products</Link>
 
-          {/* Desktop Dropdowns */}
-          {["scents", "watch", "bags"].map((cat) => (
-            <div className="relative" key={cat}>
+          {[
+            { key: "scents", label: "Scents", links: [{ href: "/women", label: "Women" }, { href: "/men", label: "Men" }] },
+            { key: "watch", label: "Watches", links: [{ href: "/watchieswomen", label: "Women" }, { href: "/watchiesmen", label: "Men" }] },
+            { key: "bags", label: "Bags", links: [{ href: "/bagswomen", label: "Women" }] }
+          ].map((cat) => (
+            <div className="relative" key={cat.key}>
               <button
-                onClick={() => toggleCategory(cat)}
+                onClick={() => toggleCategory(cat.key)}
                 className="flex items-center text-[14px] font-medium"
               >
-                {cat === "scents" && "Scents"}
-                {cat === "watch" && "Watches"}
-                {cat === "bags" && "Bags"}
+                {cat.label}
                 <FaChevronDown className="ml-1 text-sm" />
               </button>
               <div
                 className={`absolute left-0 mt-2 w-40 bg-white shadow-md rounded-md transition-all duration-300 overflow-hidden z-50 ${
-                  isCategoriesOpen === cat
+                  isCategoriesOpen === cat.key
                     ? "max-h-40 opacity-100"
                     : "max-h-0 opacity-0 pointer-events-none"
                 }`}
               >
-                <Link href={`/${cat}women`} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Women</Link>
-                <Link href={`/${cat}men`} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Men</Link>
+                {cat.links.map((link) => (
+                  <Link key={link.href} href={link.href} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
           ))}
@@ -65,7 +69,7 @@ const Navbar = () => {
           <Link href="/pages" className="text-[14px] font-medium">Pages</Link>
           <Link href="/about" className="text-[14px] font-medium">About</Link>
 
-          {/* WhatsApp Link */}
+          {/* WhatsApp */}
           <Link
             href="https://whatsapp.com/channel/0029Vb5zPkR6GcG9FVA90j2x"
             target="_blank"
@@ -102,31 +106,36 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden flex flex-col gap-2 mt-4 px-4 pb-4 border-t border-gray-200">
           <Link href="/" className="text-[#007580] text-[14px] font-medium py-2">Home</Link>
-          <Link href="/allProducts" className="text-[14px] font-medium py-2">Products</Link>
+          <Link href="/allProducts" className="text-[14px] font-medium py-2">All Products</Link>
 
           {/* Mobile Dropdowns */}
-          {["scents", "watch", "bags"].map((cat) => (
-            <div key={cat}>
+          {[
+            { key: "scents", label: "Scents", links: [{ href: "/women", label: "Women" }, { href: "/men", label: "Men" }] },
+            { key: "watch", label: "Watchies", links: [{ href: "/watchieswomen", label: "Women" }, { href: "/watchiesmen", label: "Men" }] },
+            { key: "bags", label: "Bags", links: [{ href: "/bagswomen", label: "Women" }, { href: "/bagsmen", label: "Men" }] }
+          ].map((cat) => (
+            <div key={cat.key}>
               <button
-                onClick={() => toggleCategory(cat)}
+                onClick={() => toggleCategory(cat.key)}
                 className="flex items-center justify-between w-full text-left text-[14px] font-medium py-2"
               >
-                {cat === "scents" && "Scents"}
-                {cat === "watch" && "Watchies"}
-                {cat === "bags" && "Bags"}
+                {cat.label}
                 <FaChevronDown
                   className={`ml-1 text-sm transition-transform duration-300 ${
-                    isCategoriesOpen === cat ? "rotate-180" : ""
+                    isCategoriesOpen === cat.key ? "rotate-180" : ""
                   }`}
                 />
               </button>
               <div
                 className={`pl-4 transition-all duration-300 overflow-hidden ${
-                  isCategoriesOpen === cat ? "max-h-40" : "max-h-0"
+                  isCategoriesOpen === cat.key ? "max-h-40" : "max-h-0"
                 }`}
               >
-                <Link href={`/${cat}women`} className="block py-2 text-gray-700">Women</Link>
-                <Link href={`/${cat}men`} className="block py-2 text-gray-700">Men</Link>
+                {cat.links.map((link) => (
+                  <Link key={link.href} href={link.href} className="block py-2 text-gray-700">
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
           ))}
@@ -135,7 +144,7 @@ const Navbar = () => {
           <Link href="/pages" className="text-[14px] font-medium py-2">Pages</Link>
           <Link href="/about" className="text-[14px] font-medium py-2">About</Link>
 
-          {/* WhatsApp Link Mobile */}
+          {/* WhatsApp Mobile */}
           <Link
             href="https://whatsapp.com/channel/0029Vb5zPkR6GcG9FVA90j2x"
             target="_blank"
