@@ -50,7 +50,7 @@ export default function Footer() {
                 <FaFacebookF />
               </a>
               <a
-                href="https://www.instagram.com/be_attractive_with_rumi"
+                href="https://www.instagram.com/attractions_by_rumi?igsh=MWZ0end6d2gxc2Ztcg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-500 hover:text-pink-700 text-2xl"
