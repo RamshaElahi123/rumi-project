@@ -111,8 +111,8 @@ const Navbar = () => {
           {/* Mobile Dropdowns */}
           {[
             { key: "scents", label: "Scents", links: [{ href: "/women", label: "Women" }, { href: "/men", label: "Men" }] },
-            { key: "watch", label: "Watchies", links: [{ href: "/watchieswomen", label: "Women" }, { href: "/watchiesmen", label: "Men" }] },
-            { key: "bags", label: "Bags", links: [{ href: "/bagswomen", label: "Women" }, { href: "/bagsmen", label: "Men" }] }
+            { key: "watch", label: "Watches", links: [{ href: "/watchieswomen", label: "Women" }, { href: "/watchiesmen", label: "Men" }] },
+            { key: "bags", label: "Bags", links: [{ href: "/bagswomen", label: "Women" }] }
           ].map((cat) => (
             <div key={cat.key}>
               <button
