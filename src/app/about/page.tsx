@@ -59,7 +59,7 @@ const About: React.FC = () => {
           </div>
           <div className="md:w-1/2 flex justify-center">
             <Image
-              src="/images/rumi.logo.jpeg"
+              src="/images/abr.png"
               alt="Be Attractive Logo"
               width={300}
               height={300}

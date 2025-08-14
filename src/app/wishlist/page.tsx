@@ -34,13 +34,13 @@ const Wishlist = () => {
                 {/* Left side: Product image and details */}
                 <div className="flex items-center gap-4">
                   <img
-                    src={item.imageUrl}
+                    src={item.imgUrl} // ✅ fixed to match WishlistItem type
                     alt={item.title}
                     className="h-20 w-20 object-cover rounded-lg"
                   />
                   <div>
                     <p className="text-lg font-medium">{item.title}</p>
-                    <p className="text-sm text-gray-600">${item.price}</p>
+                    <p className="text-sm text-gray-600">PKR {item.price}</p>
                   </div>
                 </div>
 
@@ -60,4 +60,4 @@ const Wishlist = () => {
   );
 };
 
-export default Wishlist;    ``
+export default Wishlist;

@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import prisma from "../db/prisma";
+import prisma from "./db/prisma";
+
 import CredentialsProvider from "next-auth/providers/credentials";
 import type { NextAuthConfig } from "next-auth";
 import { compareSync } from 'bcryptjs'; // Import compareSync

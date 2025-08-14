@@ -1,4 +1,4 @@
-// // 'use client'; // This directive makes this module a Client Component
+// // // 'use client'; // This directive makes this module a Client Component
 
 // import React, { createContext, useContext, useState, ReactNode } from 'react';
 
@@ -116,110 +116,74 @@
 //   }
 //   return context;
 // };
-'use client'; 
+'use client';
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-// Type for a single item in the cart
 export type CartItem = {
-  _id: string; // Unique identifier (e.g., from DB)
+  _id: string;
   title: string;
   price: number;
   imgUrl: string;
   quantity: number;
-  size?: string; // Optional size
+  size?: string;
 };
 
-// Context value type
 type CartContextType = {
   cartItems: CartItem[];
   addToCart: (item: CartItem) => void;
-  removeFromCart: (id: string, size?: string) => void; // Now optionally considers size
+  removeFromCart: (id: string, size?: string) => void;
   updateQuantity: (id: string, quantity: number, size?: string) => void;
   clearCart: () => void;
   cartTotal: number;
   cartItemCount: number;
 };
 
-// Create context
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-// Provider component
-interface CartProviderProps {
-  children: ReactNode;
-}
-
-export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
+export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
-  // Add item to cart
   const addToCart = (item: CartItem) => {
-    setCartItems((prevItems) => {
-      const existing = prevItems.find(
-        (i) => i._id === item._id && i.size === item.size
-      );
-
+    setCartItems(prev => {
+      const existing = prev.find(i => i._id === item._id && i.size === item.size);
       if (existing) {
-        return prevItems.map((i) =>
+        return prev.map(i =>
           i._id === item._id && i.size === item.size
             ? { ...i, quantity: i.quantity + item.quantity }
             : i
         );
       }
-
-      return [...prevItems, item];
+      return [...prev, item];
     });
   };
 
-  // Remove item (by _id and optionally size)
   const removeFromCart = (id: string, size?: string) => {
-    setCartItems((prevItems) =>
-      prevItems.filter(
-        (item) => item._id !== id || (size && item.size !== size)
-      )
-    );
+    setCartItems(prev => prev.filter(i => i._id !== id || (size && i.size !== size)));
   };
 
-  // Update quantity
   const updateQuantity = (id: string, quantity: number, size?: string) => {
-    setCartItems((prevItems) =>
-      prevItems.map((item) =>
-        item._id === id && item.size === size
-          ? { ...item, quantity: Math.max(1, quantity) }
-          : item
+    setCartItems(prev =>
+      prev.map(i =>
+        i._id === id && i.size === size ? { ...i, quantity: Math.max(1, quantity) } : i
       )
     );
   };
 
-  // Clear all items
-  const clearCart = () => {
-    setCartItems([]);
-  };
+  const clearCart = () => setCartItems([]);
 
-  // Total price
-  const cartTotal = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
+  const cartTotal = cartItems.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  const cartItemCount = cartItems.reduce((sum, i) => sum + i.quantity, 0);
+
+  return (
+    <CartContext.Provider
+      value={{ cartItems, addToCart, removeFromCart, updateQuantity, clearCart, cartTotal, cartItemCount }}
+    >
+      {children}
+    </CartContext.Provider>
   );
-
-  // Total item count
-  const cartItemCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-
-  // Provided context value
-  const value: CartContextType = {
-    cartItems,
-    addToCart,
-    removeFromCart,
-    updateQuantity,
-    clearCart,
-    cartTotal,
-    cartItemCount,
-  };
-
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
 
-// Hook to access cart context
 export const useCart = (): CartContextType => {
   const context = useContext(CartContext);
   if (!context) throw new Error('useCart must be used within a CartProvider');

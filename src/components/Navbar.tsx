@@ -184,13 +184,13 @@ const Navbar = () => {
           </div>
       {/* Contact Info with WhatsApp Icon */}
           <Link
-            href="https://wa.me/923238277117" // ✅ WhatsApp link
+            href="https://whatsapp.com/channel/0029Vb5zPkR6GcG9FVA90j2x" // ✅ WhatsApp link
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-[#272343] text-[14px] font-medium hover:text-[#25D366]" // WhatsApp green on hover
           >
             <FaWhatsapp className="text-[#25D366] w-5 h-5" /> {/* WhatsApp Icon */}
-            <span>03238277117</span>
+            <span>Join Us On WhatsApp</span>
           </Link>
         </div> 
 

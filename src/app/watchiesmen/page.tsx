@@ -1,14 +1,15 @@
 'use client';
 
 import React from 'react';
+
+
 import Navbar from '@/components/Navbar';
 import { ShoppingBag } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/app/context/CartContext';
 import { toast } from 'sonner';
-// utils/format.ts
-export const formatPKR = (price: number) => `PKR ${price.toLocaleString()}`;
+import { formatPKR } from '@/utils/format';
 
 
 
@@ -16,7 +17,7 @@ const luxuryWatches = [
   {
     id: 1,
     name: 'Active Pro Watch',
-    price: 279,
+    price: 3799,
     image: '/images/smartt.jpeg',
     tag: 'Limited',
   },

@@ -18,6 +18,7 @@ import ContactSection from "@/components/contactSection";
 import ProductCards from "./Products/page";
 import AllProducts from "@/components/allProducts";
 
+
 export default function Home() {
   return (
     <>

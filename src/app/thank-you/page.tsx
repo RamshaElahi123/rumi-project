@@ -62,7 +62,7 @@ const ThankYouPage = () => {
           </svg>
         </div>
         <h1 className="text-3xl font-bold text-gray-800">Thank You for Your Order!</h1>
-        <p className="text-gray-500 mt-2">We appreciate your trust in  <a href="/contact" className="text-purple-600 font-bold hover:underline">Comforty</a>. Your order has been placed successfully.</p>
+        <p className="text-gray-500 mt-2">We appreciate your trust in  <a href="/contact" className="text-purple-600 font-bold hover:underline">Attractions!!!</a>. Your order has been placed successfully.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

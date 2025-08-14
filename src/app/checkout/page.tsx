@@ -152,7 +152,7 @@ export default function CheckoutPage() {
         <div className="text-center text-white">
           <h2 className="text-3xl font-bold">Checkout</h2>
           <p className="pt-1">
-            <Link href="/" className="text-yellow-400 text-4xl font-extrabold h-22 w-10">
+            <Link href="/" className="text-Black-400 text-4xl font-semibold h-22 w-10">
               Checking Out
             </Link>{" "}
             › Checkout

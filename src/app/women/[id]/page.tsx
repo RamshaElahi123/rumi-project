@@ -16,7 +16,7 @@ const WomenPerfume = () => {
     {
       id: 1,
       name: 'Uroosa',
-      price: 2500,
+      price: 2200,
       originalPrice: 3000,
       tag: 'Premium',
       image: '/images/uroosa.jpeg',
