@@ -20,7 +20,7 @@ const products = [
   { id: 1, name: "Uroosa", price: 99, originalPrice: 129, description: "Romantic blend...", images: ["/images/uroosa.jpeg"], category: "Scents" },
   { id: 2, name: "Miss Dior 5 in 1 set", price: 110, description: "A luxurious floral...", images: ["/images/M.Dior mini2.webp"], category: "Scents" },
   { id: 3, name: "Channel 5 in 1 Set", price: 105, description: "A fresh and light...", images: ["/images/channel 5.webp"], category: "Scents" },
-  { id: 4, name: "Floral Desire", price: 125, originalPrice: 150, description: "Sensual floral...", images: ["/images/gucci purple.webp"], category: "Scents" },
+  { id: 4, name: "Spark", price: 2900, originalPrice: Math.round(2900 * 1.2), tag: "Sale", images: ["/images/spark2.jpeg"], category: "Scents" },
   { id: 5, name: "Zarar", price: 120, originalPrice: 180, tag: "Gold Edition", images: ["/images/zaara..jpeg"], description: "Premium masculine...", category: "Scents" },
   { id: 6, name: "Janan", price: 95, tag: "Gold Edition", images: ["/images/golsz..jpeg"], description: "A blend of eastern...", category: "Scents" },
   { id: 7, name: "Exclusive", price: 135, images: ["/images/exclusive.jpeg"], description: "Signature scent...", category: "Scents" },
