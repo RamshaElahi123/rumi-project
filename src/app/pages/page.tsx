@@ -66,6 +66,15 @@ const SocialLinks = () => {
 
           {/* Social Buttons */}
           <div className="flex flex-col gap-5">
+             <SocialButton
+  href="https://whatsapp.com/channel/0029Va8gM6k0cT7tKkfxl33Q" 
+  label="WhatsApp"
+  bgColor="bg-[#25D366]"
+  hoverColor="bg-[#1DA851]"
+  outlineColor="[#25D366]"
+  Icon={FaWhatsapp}
+  secondaryText="Join →"
+/>
             <SocialButton
               href="https://www.facebook.com/share/18uy3b7DNL/"
               label="Facebook"
