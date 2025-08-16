@@ -15,7 +15,7 @@ const AllProducts = () => {
   const products = [
     // ✅ SCENTS (mixed ladies & gents)
     { id: 7, name: "Dior", price: 2499, originalPrice: Math.round(2499 * 1.2), tag: "Exclusive", images: ["/images/Miss Dior.jpeg"], category: "Scents" },
-    { id: 1, name: "Zarar", price: 2499, originalPrice: Math.round(2499 * 1.2), tag: "Sale", images: ["/images/zaara..jpeg"], category: "Scents" },
+    { id: 1, name: "Zarar Gold", price: 2499, originalPrice: Math.round(2499 * 1.2), tag: "Sale", images: ["/images/zaara..jpeg"], category: "Scents" },
     { id: 9, name: "Gucci Flora", price: 799, originalPrice: Math.round(799 * 1.2), images: ["/images/Gucci Flora.webp"], category: "Scents" },
     { id: 4, name: "All rounder by Shoaib Malik", price: 4999, originalPrice: Math.round(4999 * 1.2), tag: "Sale", images: ["/images/all rounder j..jpeg"], category: "Scents" },
     { id: 11, name: "J. Pen Perfume Set", price: 999, originalPrice: Math.round(999 * 1.2), images: ["/images/PEN.jpeg"], category: "Scents" },
