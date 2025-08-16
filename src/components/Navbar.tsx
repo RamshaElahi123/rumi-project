@@ -146,13 +146,13 @@ const Navbar = () => {
 
           {/* WhatsApp Mobile */}
           <Link
-            href="https://whatsapp.com/channel/0029Vb5zPkR6GcG9FVA90j2x"
+            href="03238277117"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-[#272343] text-[14px] font-medium hover:text-[#25D366] py-2"
           >
             <FaWhatsapp className="text-[#25D366] w-5 h-5" />
-            <span>Join Us On WhatsApp</span>
+            <span> Contact Us On WhatsApp</span>
           </Link>
         </div>
       )}
