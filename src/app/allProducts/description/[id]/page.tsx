@@ -23,7 +23,7 @@ const products = [
   { id: 4, name: "Floral Desire", price: 125, originalPrice: 150, description: "Sensual floral...", images: ["/images/gucci purple.webp"], category: "Scents" },
   { id: 5, name: "Zarar", price: 120, originalPrice: 180, tag: "Gold Edition", images: ["/images/zaara..jpeg"], description: "Premium masculine...", category: "Scents" },
   { id: 6, name: "Janan", price: 95, tag: "Gold Edition", images: ["/images/golsz..jpeg"], description: "A blend of eastern...", category: "Scents" },
-  { id: 7, name: "Exclusive", price: 135, images: ["/images/Exclusiv.webp"], description: "Signature scent...", category: "Scents" },
+  { id: 7, name: "Exclusive", price: 135, images: ["/images/exclusive.jpeg"], description: "Signature scent...", category: "Scents" },
   { id: 8, name: "All rounder by Shoaib Malik", price: 150, originalPrice: 170, tag: "Exclusive", images: ["/images/all rounder j..jpeg"], description: "Sporty fragrance...", category: "Scents" },
 
   // ✅ WATCHES
