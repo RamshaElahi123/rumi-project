@@ -85,7 +85,7 @@ const SocialLinks = () => {
               secondaryText="Visit →"
             />
             <SocialButton
-              href="https://www.tiktok.com/@be.attractive.wit?_t=ZS-8xpM39ZamJA&_r=1"
+              href="https://www.instagram.com/attractions_by_rumi?igsh=MWZ0end6d2gxc2Ztcg=="
               label="TikTok"
               bgColor="bg-black"
               hoverColor="bg-gray-800"
