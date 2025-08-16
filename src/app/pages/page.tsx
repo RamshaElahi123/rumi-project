@@ -83,7 +83,17 @@ const SocialLinks = () => {
               outlineColor="[#1877F2]"
               Icon={Facebook}
               secondaryText="Visit →"
-            />
+            /> 
+<SocialButton
+  href="https://whatsapp.com/channel/0029Vb5zPkR6GcG9FVA90j2x"
+  label="WhatsApp"
+  bgColor="bg-[#25D366]"
+  hoverColor="bg-[#1DA851]"
+  outlineColor="[#25D366]"
+  Icon={FaWhatsapp} // Make sure you have imported FaWhatsapp from react-icons/fa
+  secondaryText="Join →"
+/>
+
             <SocialButton
               href="https://www.instagram.com/attractions_by_rumi?igsh=MWZ0end6d2gxc2Ztcg=="
               label="Instagram"
