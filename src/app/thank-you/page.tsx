@@ -30,7 +30,7 @@ const ThankYouPage = () => {
       setCheckoutData(parsedData);
       localStorage.removeItem("checkoutData");
 
-      fetch("/apii/order", {
+      fetch("/api/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

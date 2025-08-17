@@ -1,94 +1,78 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
+import Navbar from "@/components/Navbar";
+import Link from "next/link";
+import Image from "next/image";
 
-
-import Navbar from '@/components/Navbar';
-import { ShoppingBag } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useCart } from '@/app/context/CartContext';
-import { toast } from 'sonner';
-import { formatPKR } from '@/utils/format';
-
-
-
-const luxuryWatches = [
-  {
-    id: 1,
-    name: 'Active Pro Watch',
-    price: 3799,
-    image: '/images/smartt.jpeg',
-    tag: 'Limited',
+const categories = [
+   {
+    id: "luxury",
+    title: "Luxury Watches",
+    link: "/watchiesmen/luxury",
+    image: "/images/5 bracelet.jpeg",
   },
+  {
+    id: "leather",
+    title: "Leather Watches",
+    link: "/watchiesmen/leather",
+    image: "/images/leatherwatch.jpeg", // ✅ fixed
+  },
+  {
+    id: "smart",
+    title: "Smart Watches",
+    link: "/watchiesmen/smart",
+    image: "/images/smartt.jpeg",
+  },
+ 
+ {
+  id: "couple",
+  title: "Couple Watches",
+  link: "/watchiesmen/couple",
+  image: "/images/wt.jpeg",
+ }
+
 ];
 
-const LuxuryCollectionPage = () => {
-  const { addToCart } = useCart();
-
+const WatchesPage = () => {
   return (
     <div className="bg-white min-h-screen">
       <Navbar />
+      <div className="max-w-7xl mx-auto px-4 py-12 text-center">
+        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          Men’s Watch Collections
+        </h1>
+        <p className="text-lg text-gray-600 mb-12">
+          Explore our exclusive categories designed for every occasion.
+        </p>
 
-      <section className="py-16 bg-gradient-to-br from-yellow-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold text-yellow-800 mb-4">
-            Luxury Watch Collection
-          </h1>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Discover timeless elegance and craftsmanship in our premium luxury watches.
-          </p>
-        </div>
-
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 max-w-7xl mx-auto">
-          {luxuryWatches.map((watch) => (
-            <div
-              key={watch.id}
-              className="relative bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden"
+        {/* Categories Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {categories.map((cat) => (
+            <Link
+              key={cat.id}
+              href={cat.link}
+              className="group block bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden"
             >
-              <Link href={`/watchiesmen/luxury/${watch.id}`}>
+              <div className="relative w-full h-56">
                 <Image
-                  src={watch.image}
-                  alt={watch.name}
-                  width={500}
-                  height={500}
-                  className="w-full h-64 object-cover cursor-pointer"
-                  priority
+                  src={cat.image}
+                  alt={cat.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition"
                 />
-              </Link>
-
-              {watch.tag && (
-                <span className="absolute top-3 left-3 bg-yellow-700 text-white text-xs px-3 py-1 rounded-full uppercase">
-                  {watch.tag}
-                </span>
-              )}
-
-              <div className="p-4 text-center">
-                <h3 className="text-xl font-semibold">{watch.name}</h3>
-                <p className="text-yellow-700 font-bold mt-1">{formatPKR(watch.price)}</p>
-                <button
-                  onClick={() => {
-                    addToCart({
-                      _id: watch.id.toString(),
-                      title: watch.name,
-                      price: watch.price,
-                      imgUrl: watch.image,
-                      quantity: 1,
-                    });
-                    toast.success(`${watch.name} added to cart! 🛒`);
-                  }}
-                  className="mt-3 inline-flex items-center bg-yellow-700 text-white px-4 py-2 rounded-full hover:bg-yellow-900 transition"
-                >
-                  <ShoppingBag className="h-4 w-4 mr-1" />
-                  Add to Cart
-                </button>
               </div>
-            </div>
+              <div className="p-4">
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {cat.title}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
-      </section>
+      </div>
     </div>
   );
 };
 
-export default LuxuryCollectionPage;
+export default WatchesPage;

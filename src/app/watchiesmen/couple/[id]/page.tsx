@@ -15,65 +15,89 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
-const luxuryProducts = [
+// ✅ Updated products with multiple images
+const coupleProducts = [
   {
     id: 1,
-    name: 'Diamond Royale Watch',
-    price: 999,
-    images: ['/images/luxury1.jpeg', '/images/luxury2.jpeg'],
-    description:
-      'Couple watch , A dazzling timepiece adorned with fine diamonds and crafted with precision. Pure elegance on your wrist.',
+    name: 'Classic Silver Dial',
+    price: 2999,
+    images: [
+      '/images/wt.jpeg',
+      '/images/wt-side.jpeg',
+      '/images/wt-box.jpeg',
+    ],
+    tag: 'Couple',
+    description: 'Elegant silver dial couple watch with timeless design.',
   },
   {
     id: 2,
-    name: 'Elite Sapphire',
-    price: 1299,
-    images: ['/images/luxury2.jpeg', '/images/luxury1.jpeg'],
-    description:
-      'Couple Watch ,Radiating luxury, this watch features a deep sapphire dial and a sleek, refined profile.',
+    name: 'Fancy Navy Blue Watch',
+    price: 2999,
+    images: [
+      '/images/fancy 2.jpeg',
+      '/images/fancy-2-side.jpeg',
+    ],
+    tag: 'Couple',
+    description: 'Stylish navy blue couple watch with modern aesthetics.',
   },
   {
     id: 3,
-    name: 'Golden Prestige',
-    price: 1499,
-    images: ['/images/luxury3.jpeg', '/images/luxury5.jpeg'],
-    description:
-      'Couple Watch ,With its bold golden body, this prestige piece is designed for those who love attention.',
+    name: 'Rich Gold Elegant Watch',
+    price: 2999,
+    images: [
+      '/images/fancy 3.jpeg',
+      '/images/fancy-3-side.jpeg',
+    ],
+    tag: 'Couple',
+    description: 'Luxurious gold couple watch with a premium finish.',
   },
   {
     id: 4,
-    name: 'Platinum Luxe',
-    price: 1999,
-    images: ['/images/luxury4.jpeg', '/images/luxury6.jpeg'],
-    description:
-      'Couple Watch , A limited-edition platinum watch with a minimalist yet high-class presence.',
+    name: 'CK Gold Black Couple',
+    price: 2499,
+    images: [
+      '/images/ck couple gold black.jpeg',
+      '/images/ck-couple-gold-black-side.jpeg',
+    ],
+    tag: 'Couple',
+    description: 'Calvin Klein black & gold couple edition watch.',
   },
   {
     id: 5,
-    name: 'Emerald Elegance',
-    price: 1399,
-    images: ['/images/luxury5.jpeg', '/images/luxury3.jpeg'],
-    description:
-      'Couple Watch, Featuring emerald stones and a slim band — grace meets green brilliance.',
+    name: 'CK Black Gold Couple',
+    price: 2499,
+    images: [
+      '/images/ck couple black gold.jpeg',
+      '/images/ck-couple-black-gold-side.jpeg',
+    ],
+    tag: 'Couple',
+    description: 'Elegant Calvin Klein black with golden detailing.',
   },
   {
     id: 6,
-    name: 'Royal Pearl',
-    price: 1899,
-    images: ['/images/luxury6.jpeg', '/images/luxury2.jpeg'],
-    description:
-      'Couple Watch ,Combining pearls with modern design, this bestseller brings timeless royalty to life.',
+    name: 'CK Black Grey Couple',
+    price: 2499,
+    images: [
+      '/images/ck couple black grey.jpeg',
+      '/images/ck-couple-black-grey-side.jpeg',
+    ],
+    tag: 'Couple',
+    description: 'Modern Calvin Klein couple watch in black & grey.',
   },
 ];
 
-const LuxuryProductDetail = () => {
+const CoupleProductDetail = () => {
   const { id } = useParams();
-  const product = luxuryProducts.find((p) => p.id.toString() === id);
+  const product = coupleProducts.find((p) => p.id.toString() === id);
   const { addToCart } = useCart();
   const [imageIndex, setImageIndex] = useState(0);
 
   if (!product) {
-    return <div className="text-center py-20 text-xl text-gray-600">Product not found</div>;
+    return (
+      <div className="text-center py-20 text-xl text-gray-600">
+        Product not found
+      </div>
+    );
   }
 
   const handleNext = () => {
@@ -90,8 +114,8 @@ const LuxuryProductDetail = () => {
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <div className="flex items-center text-sm text-gray-500 mb-6">
-          <Link href="/watchiesmen/luxury" className="hover:underline">
-            Luxury
+          <Link href="/watchiesmen/couple" className="hover:underline">
+            Couple Watches
           </Link>
           <ChevronRight size={16} className="mx-2" />
           <span>{product.name}</span>
@@ -128,11 +152,15 @@ const LuxuryProductDetail = () => {
 
           {/* Product Info */}
           <div className="space-y-6">
-            <h1 className="text-3xl font-bold text-[#b38b00] font-serif">{product.name}</h1>
+            <h1 className="text-3xl font-bold text-pink-600 font-serif">
+              {product.name}
+            </h1>
             <div className="text-xl font-medium text-gray-900">
-              ${product.price.toFixed(2)}
+              ₨ {product.price.toLocaleString('ur-PK')}
             </div>
-            <p className="text-gray-600 text-lg leading-relaxed">{product.description}</p>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              {product.description}
+            </p>
 
             <div className="flex items-center gap-4">
               <button
@@ -144,9 +172,9 @@ const LuxuryProductDetail = () => {
                     imgUrl: product.images[0],
                     quantity: 1,
                   });
-                  toast.success('Added to cart ✨');
+                  toast.success('Added to cart ❤️');
                 }}
-                className="inline-flex items-center justify-center gap-2 bg-[#b38b00] text-white px-6 py-3 rounded-full hover:bg-yellow-800 transition text-sm"
+                className="inline-flex items-center justify-center gap-2 bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700 transition text-sm"
               >
                 <ShoppingBag size={18} />
                 Add to Cart
@@ -167,4 +195,4 @@ const LuxuryProductDetail = () => {
   );
 };
 
-export default LuxuryProductDetail;
+export default CoupleProductDetail;

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 import { Instagram, Facebook, Mail } from "lucide-react";
 import { SiTiktok } from "react-icons/si"; // ✅ TikTok logo from react-icons
 import Topbar from "@/components/Topbar"; // ✅ Added Topbar
@@ -67,6 +68,16 @@ const SocialLinks = () => {
           {/* Social Buttons */}
           <div className="flex flex-col gap-5">
             <SocialButton
+              href="https://whatsapp.com/channel/0029Vb5zPkR6GcG9FVA90j2x"
+              label="WhatsApp"
+              bgColor="bg-[#25D366]"
+              hoverColor="bg-[#1DA851]"
+              outlineColor="[#25D366]"
+              Icon={FaWhatsapp}
+              secondaryText="Join →"
+            />
+
+            <SocialButton
               href="https://www.facebook.com/share/18uy3b7DNL/"
               label="Facebook"
               bgColor="bg-[#1877F2]"
@@ -90,7 +101,7 @@ const SocialLinks = () => {
               bgColor="bg-black"
               hoverColor="bg-gray-800"
               outlineColor="black"
-              Icon={SiTiktok} // ✅ Using react-icons TikTok
+              Icon={SiTiktok}
               secondaryText="Visit →"
             />
             <SocialButton
@@ -107,6 +118,14 @@ const SocialLinks = () => {
           {/* Footer Social Icons */}
           <div className="flex justify-center gap-6 mt-10">
             <Link
+              href="https://whatsapp.com/channel/0029Vb5zPkR6GcG9FVA90j2x"
+              target="_blank"
+              aria-label="WhatsApp"
+              className="text-[#25D366] hover:scale-110 transition"
+            >
+              <FaWhatsapp className="w-6 h-6" />
+            </Link>
+            <Link
               href="https://www.facebook.com/share/18uy3b7DNL/"
               target="_blank"
               aria-label="Facebook"
@@ -115,7 +134,7 @@ const SocialLinks = () => {
               <Facebook className="w-6 h-6" />
             </Link>
             <Link
-              href="https://www.instagram.com/be_attractive_with_rumi?igsh=MWZ0end6d2gxc2Ztcg=="
+              href="https://www.instagram.com/attractions_by_rumi?igsh=MWZ0end6d2gxc2Ztcg=="
               target="_blank"
               aria-label="Instagram"
               className="text-pink-500 hover:scale-110 transition"
@@ -128,7 +147,7 @@ const SocialLinks = () => {
               aria-label="TikTok"
               className="text-black hover:scale-110 transition"
             >
-              <SiTiktok className="w-6 h-6" /> {/* ✅ Using react-icons TikTok */}
+              <SiTiktok className="w-6 h-6" />
             </Link>
             <Link
               href="mailto:beattractivewithrumi@gmail.com"

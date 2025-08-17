@@ -35,7 +35,7 @@ const womenWatches = [
     id: 3,
     name: 'Classic Silver Dial',
     price: 1999,
-    images: ['/images/wt.jpg'],
+    images: ['/images/wt.jpeg'],
     description: 'Classic silver Fancy dial watch for Party sophistication.',
   },
   {

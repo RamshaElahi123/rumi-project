@@ -24,7 +24,7 @@ export default function Footer() {
                 className="ml-3"
               />
               <span className="text-[#272343] text-[26px] font-bold">
-                Be Attractive With Rumi
+              Attractions By Rumi
               </span>
             </div>
             <p className="mt-4 text-gray-500">
@@ -169,7 +169,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="flex justify-between items-center flex-wrap text-white bg-[#272343] pt-4 pb-4 mt-8 rounded-sm">
           <p className="w-full text-center text-sm">
-            ©2025 Be Attractive With Rumi. Designed & Developed by{" "}
+            ©2025 Attractions By Rumi. Designed & Developed by{" "}
             <span className="font-semibold">Ramsha Elahi</span>
           </p>
         </div>

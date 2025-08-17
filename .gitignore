@@ -34,3 +34,6 @@ next-env.d.ts
 
 # Build/output folders
 dist/
+# Environment variables
+.env
+.env.local

@@ -10,26 +10,48 @@ import Link from 'next/link';
 
 const coupleProducts = [
   {
-    id: 3,
-    name: 'Classic Silver Dial',
-    price: 1999,
-    image: '/images/wt.jpeg',
-    tag: '1 Piece',
-  },
-  {
-    id: 4,
-    name: 'Fancy Neavy Blue Watch',
-    price: 1999,
-    image: '/images/fancy 2.jpeg',
-    tag: '1 Piece',
-  },
-  {
     id: 1,
-    name: 'Rich Gold Elegant Watch',
-    price: 1999,
-    image: '/images/fancy 3.jpeg',
-    tag: '1 Piece',
+    name: 'Classic Silver Dial',
+    price: 2999,
+    image: '/images/wt.jpeg',
+    tag: 'Couple',
   },
+  {
+    id: 2,
+    name: 'Fancy Neavy Blue Watch',
+    price: 2999,
+    image: '/images/fancy 2.jpeg',
+    tag: 'Couple',
+  },
+  {
+    id: 3,
+    name: 'Rich Gold Elegant Watch',
+    price: 2999,
+    image: '/images/fancy 3.jpeg',
+    tag: 'Couple',
+  },
+   {
+    id: 4,
+    name: 'CK Gold Black Couple',
+    price: 2499,
+    image: '/images/ck couple gold black.jpeg',
+    tag: 'Couple',
+  },
+   {
+    id: 5,
+    name: 'CK Black Gold Couple',
+    price: 2499,
+    image: '/images/ck couple black gold.jpeg',
+    tag: 'Couple',
+  },
+   {
+    id: 6,
+    name: 'CK Black Grey Couple',
+    price: 2499,
+    image: '/images/ck couple black grey.jpeg',
+    tag: 'Couple',
+  },
+
 ];
 
 const CoupleWatchesPage = () => {
